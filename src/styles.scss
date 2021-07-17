@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'scss/fonts';
+// @import 'scss/bootstrap/bootstrap-reboot.scss';
+
 @import 'scss/variable';
 @import 'scss/normalize';
+@import 'scss/icons';
 
 *,
 *::before,
@@ -50,13 +53,91 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 0;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  height: 100%;
+}
+
+.inner {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+  max-width: 1216px+24px+24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
 .heading-1 {
-  font-size: 4.2rem;
   font-weight: $font-weight-bold;
-  line-height: 1.3;
+  font-size: 2.4rem;
+  line-height: 1.3333;
 
-  @media screen and (min-width: 48rem) {
-    font-size: 4vw;
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 5.6rem;
+    line-height: 1.4285;
+  }
+}
+
+.subheading {
+  display: block;
+  color: #42464b;
+  font-weight: $font-weight-base;
+  @media screen and (min-width: 768px) {
+    display: inline;
+  }
+}
+
+.smalltitle {
+  padding-top: 1.6rem;
+  color: #61666a;
+
+  img {
+    margin-right: 0.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-block;
+    vertical-align: -0.2rem;
+  }
+
+  a {
+    display: inline-block;
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+}
+
+.socialmedia-groups {
+  list-style: none;
+  padding: 1.2rem 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socialmedia-item {
+  margin: 0;
+  padding: 0 2.4rem 0 0;
+
+  a {
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      color: $black;
+    }
   }
 }
