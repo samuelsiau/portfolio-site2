@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio-site2';
+
+  documentTitle:string = 'Samuel Siau';
+
+  constructor(
+    private titleService:Title,
+    private meta:Meta) {
+    this.titleService.setTitle("Samuel Siau - I'm designer");
+    this.meta.addTag({ name: "description", content: "UX/UI Designer. Product designer. UX Designer. UI Designer. I design and build beautiful websites, products and design systems that help people and make a difference." });  
+  }
+
 }
