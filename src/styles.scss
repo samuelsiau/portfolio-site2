@@ -2,10 +2,20 @@
 
 @import 'scss/fonts';
 // @import 'scss/bootstrap/bootstrap-reboot.scss';
-
 @import 'scss/variable';
 @import 'scss/normalize';
 @import 'scss/icons';
+
+:root {
+  --black: $black;
+  --font-heading: 'Larsseit',"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  --font-body: 'Inter',"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  --fill: #000;
+  --time: 30000ms;
+  --amount: 2;
+}
+
+@import 'scss/blob';
 
 *,
 *::before,
@@ -16,19 +26,11 @@
 html {
   font-size: 10px;
   font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(#FFF, 0);
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
-}
-
-
-html,
-body {
-  height: 100%;
 }
 
 
@@ -44,8 +46,9 @@ body {
   line-height: $line-height-base;
   color: $body-color;
   background-color: $body-bg;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba($black, 0);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.1rem;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -54,16 +57,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .flex-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
   align-items: center;
-  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .inner {
+  position: relative;
   order: 0;
   flex: 0 1 auto;
   align-self: center;
@@ -72,18 +78,29 @@ h1, h2, h3, h4, h5, h6, p {
   padding-right: 24px;
 }
 
+.inner__content {
+  position: relative;
+  z-index: 1;
+}
+
 .heading-1 {
+  font-family: var(--font-heading);
   font-weight: $font-weight-bold;
   font-size: 2.4rem;
   line-height: 1.3333;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 4rem;
     line-height: 1.4;
+    letter-spacing: -0.2rem;
   }
   @media screen and (min-width: 992px) {
-    font-size: 5.6rem;
-    line-height: 1.4285;
+    // font-size: 5.6rem;
+    // line-height: 1.4285;
+    font-size: 7.2rem;
+    line-height: 1.3333333;
+    letter-spacing: -0.3rem;
   }
 }
 
@@ -91,14 +108,11 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
   color: #42464b;
   font-weight: $font-weight-base;
-  @media screen and (min-width: 768px) {
-    display: inline;
-  }
 }
 
 .smalltitle {
   padding-top: 1.6rem;
-  color: #61666a;
+  text-align: center;
 
   img {
     margin-right: 0.4rem;
@@ -126,13 +140,15 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .socialmedia-item {
   margin: 0;
-  padding: 0 2.4rem 0 0;
+  padding: 0 1.2rem 0 1.2rem;
 
   a {
+    display: block;
     color: $black;
     text-decoration: none;
 
@@ -140,4 +156,13 @@ h1, h2, h3, h4, h5, h6, p {
       color: $black;
     }
   }
+}
+
+.blobCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0.70) translate(0%, -50%);
 }
