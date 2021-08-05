@@ -56,32 +56,44 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 0;
 }
 
-.flex-container {
+.outerContainer {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center;
-  min-height: 100vh;
   overflow: hidden;
 }
 
 .inner {
   position: relative;
-  order: 0;
-  flex: 0 1 auto;
-  align-self: center;
-  max-width: 1216px+24px+24px;
-  padding-left: 24px;
-  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 1;
 }
 
 .inner__content {
-  position: relative;
-  z-index: 1;
+  max-width: 1216px+24px+24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
 }
+
+.blobCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0.75);
+
+  .tk-blob {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 
 .heading-1 {
   font-family: var(--font-heading);
@@ -96,8 +108,8 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: -0.2rem;
   }
   @media screen and (min-width: 992px) {
-    // font-size: 5.6rem;
-    // line-height: 1.4285;
+    font-size: 5.6rem;
+    line-height: 1.4285;
   }
   @media screen and (min-width: 1200px) {
     font-size: 7.2rem;
@@ -160,11 +172,3 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.blobCenter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: scale(0.70) translate(0%, -50%);
-}
