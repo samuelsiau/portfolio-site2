@@ -18,6 +18,7 @@
     "@angular/platform-browser": "~12.1.2",
     "@angular/platform-browser-dynamic": "~12.1.2",
     "@angular/router": "~12.1.2",
+    "@juggle/resize-observer": "^3.3.1",
     "locomotive-scroll": "^4.1.1",
     "rxjs": "~6.6.0",
     "scrollreveal": "^4.0.9",
