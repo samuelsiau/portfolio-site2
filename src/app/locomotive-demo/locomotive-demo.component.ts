@@ -14,31 +14,33 @@ export class LocomotiveDemoComponent implements OnInit {
 
   scroll: any;
 
-
   constructor() {
   }
 
   ngOnInit(): void {
-    this.scroll = new LocomotiveScroll({
+
+    const options = {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
       getDirection: true
-    });
+    }
+
+    this.scroll = new LocomotiveScroll(options);
   }
 
-  // ngAfterViewInit() {
-  //   console.log("afterinit");
-  //   const ro = new ResizeObserver((entries, observer) => {
-  //     entries.forEach((entry, index) => {
-  //       const { inlineSize: width, blockSize: height } = entry.contentBoxSize[0];
-  //       if(this.scroll) {
-  //         this.scroll.update();
-  //       }
-  //     });
-  //   });
+  ngAfterViewInit() {
+    console.log("afterinit");
+    const ro = new ResizeObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        const { inlineSize: width, blockSize: height } = entry.contentBoxSize[0];
+        if(this.scroll) {
+          this.scroll.update();
+        }
+      });
+    });
 
-  //   ro.observe(this.scrollContent.nativeElement);
-  // }
+    ro.observe(this.scrollContent.nativeElement);
+  }
 
 
 }
