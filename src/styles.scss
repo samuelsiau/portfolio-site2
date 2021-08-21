@@ -24,7 +24,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 100%;
   font-family: sans-serif;
   -webkit-tap-highlight-color: rgba(#FFF, 0);
 }
@@ -40,7 +40,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-family: $font-family-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
@@ -48,7 +48,7 @@ body {
   background-color: $body-bg;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.1px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -98,23 +98,23 @@ h1, h2, h3, h4, h5, h6, p {
 .heading-1 {
   font-family: var(--font-heading);
   font-weight: $font-weight-bold;
-  font-size: 2.4rem;
+  font-size: 24px;
   line-height: 1.3333;
   text-align: center;
 
   @media screen and (min-width: 768px) {
-    font-size: 4rem;
+    font-size: 40px;
     line-height: 1.4;
-    letter-spacing: -0.2rem;
+    letter-spacing: -0.2px;
   }
   @media screen and (min-width: 992px) {
-    font-size: 5.6rem;
+    font-size: 56px;
     line-height: 1.4285;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 7.2rem;
+    font-size: 72px;
     line-height: 1.3333333;
-    letter-spacing: -0.3rem;
+    letter-spacing: -0.3px;
   }
 }
 
@@ -125,15 +125,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .smalltitle {
-  padding-top: 1.6rem;
+  padding-top: 16px;
   text-align: center;
 
   img {
-    margin-right: 0.4rem;
-    width: 1.6rem;
-    height: 1.6rem;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
-    vertical-align: -0.2rem;
+    vertical-align: -0.2px;
   }
 
   a {
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .socialmedia-groups {
   list-style: none;
-  padding: 1.2rem 0 0 0;
+  padding: 12px 0 0 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .socialmedia-item {
   margin: 0;
-  padding: 0 1.2rem 0 1.2rem;
+  padding: 0 12px 0 12px;
 
   a {
     display: block;
