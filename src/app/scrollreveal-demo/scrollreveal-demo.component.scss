@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+:host ::ng-deep img {
+  max-width: 100%;
+  height: auto;
+}
+
+:host .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+:host .itemset {
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    flex-grow: 1;
+  }
+}
