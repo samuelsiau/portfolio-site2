@@ -1,0 +1,32 @@
+:host {
+  display: block;
+}
+
+:host ::ng-deep img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+:host .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+:host ::ng-deep {
+  .gsaptest {
+    font-size: 24px;
+  }
+
+  .gsapTextPlugin {
+    font-size: 40px;
+  }
+
+  .gsaphelloworld {
+    font-size: 56px;
+  }
+}
+
+
+

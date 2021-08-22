@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ScrollrevealDemoComponent } from './scrollreveal-demo/scrollreveal-demo.component';
 import { LocomotiveDemoComponent } from './locomotive-demo/locomotive-demo.component';
+import { DemoNavComponent } from './demo-nav/demo-nav.component';
+import { GsapDemoComponent } from './gsap-demo/gsap-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ScrollrevealDemoComponent,
-    LocomotiveDemoComponent
+    LocomotiveDemoComponent,
+    DemoNavComponent,
+    GsapDemoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+:host nav {
+  margin: 0;
+  background-color: azure;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+      flex-grow: 1;
+    }
+
+    a {
+      display: inline-flex;
+      font-size: 14px;
+      text-decoration: none;
+
+      &.active {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+  }
+}
