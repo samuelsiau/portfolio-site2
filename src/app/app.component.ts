@@ -14,7 +14,6 @@ export class AppComponent {
     private titleService:Title,
     private meta:Meta) {
     this.titleService.setTitle("Samuel Siau - I'm designer");
-    this.meta.addTag({ name: "description", content: "UX/UI Designer. Product designer. UX Designer. UI Designer. I design and build beautiful websites, products and design systems that help people and make a difference." });  
+    this.meta.addTag({ name: "description", content: "UX/UI Designer. Product designer. UX Designer. UI Designer. I design and build beautiful websites, products and design systems that help people and make a difference." });
   }
-
 }

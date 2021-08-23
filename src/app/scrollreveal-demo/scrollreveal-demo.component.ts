@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DemoNavComponent } from '../demo-nav/demo-nav.component';
 
 @Component({
   selector: 'app-scrollreveal-demo',
