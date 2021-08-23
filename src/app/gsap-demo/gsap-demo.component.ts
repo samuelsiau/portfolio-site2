@@ -1,10 +1,9 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-// import * as gsap from 'gsap';
-// import { gsap } from "gsap";
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { CSSPlugin } from 'gsap/CSSPlugin';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
+import SplitType from 'split-type';
 
 @Component({
   selector: 'app-gsap-demo',
@@ -13,23 +12,36 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 })
 export class GsapDemoComponent implements OnInit, AfterViewInit {
 
-  tween:any;
-
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    gsap.registerPlugin(TextPlugin, CSSPlugin, CSSRulePlugin);
-    this.tween = gsap.fromTo('.gsaptest', {opacity: 0, y:100}, {opacity: 1, y:0, duration: 1.2, ease:"power2.inout"});
-    this.tween = gsap.from('.gsapTextPlugin', {
-      opacity: 0, duration: 1, text: ""
-    });
-    this.tween = gsap.from('.gsaphelloworld', {
-      duration: 2,
-    rotation: 360,
-    transformOrigin: "center center"
+
+    const spplittext = new SplitType('.gsapslpittext', {
+      types: 'chars',
+      // absolute: true,
     });
 
+    gsap.registerPlugin(TextPlugin, CSSPlugin, CSSRulePlugin);
+    gsap.fromTo('.gsaptest', {
+      opacity: 0, y:100
+    }, {
+      opacity: 1, y:0, duration: 1.2, ease:"power2.inout"
+    });
+     gsap.from('.gsapTextPlugin', {
+      duration: 2,
+      text: " ",
+      delay:1
+    });
+    gsap.from(spplittext.chars, {
+      opacity: 0,
+      y: '150%',
+      duration: 1.2,
+      stagger: {
+        amount: 1.4
+      },
+      delay: 1.4,
+      ease:"expo"
+    })
   }
 
   ngAfterViewInit():void {

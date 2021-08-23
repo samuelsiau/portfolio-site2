@@ -10,11 +10,12 @@ declare var LocomotiveScroll: any;
 })
 export class LocomotiveDemoComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('scrollContent', { static: true }) scrollContent!: ElementRef;
+  // @ViewChild('scrollContent', { static: true }) scrollContent!: ElementRef;
+  @ViewChild('scrollContent', { static: true })
 
   scroll: any;
 
-  constructor() {}
+  constructor(private scrollContent: ElementRef) {}
 
   ngOnInit(): void {
 
