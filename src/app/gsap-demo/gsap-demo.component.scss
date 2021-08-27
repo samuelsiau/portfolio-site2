@@ -52,13 +52,8 @@
     line-height: 1.25;
 	  overflow: hidden;
     color: blue;
-
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    // perspective: 1100px;
-    // perspective-origin: 50% 50%;
-
-
     &.splitting .char{
       animation: slide-in .6s cubic-bezier(.5, 0, .5, 1) both;
       animation-delay: calc(20ms * var(--char-index) + 1000ms );

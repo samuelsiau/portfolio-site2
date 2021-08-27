@@ -31,7 +31,7 @@ export class GsapDemoComponent implements OnInit, AfterViewInit {
       target: parent,
       by: 'lines'
     })
-    console.log(results[0].lines)
+    // console.log(results[0].lines)
 
     const splitTypeTest = new SplitType('.gsapSpliTypeTest', {
       types: 'chars,lines,words',
