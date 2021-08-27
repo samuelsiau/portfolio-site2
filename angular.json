@@ -35,12 +35,14 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/locomotive-scroll/dist/locomotive-scroll.min.css"
+              "./node_modules/locomotive-scroll/dist/locomotive-scroll.min.css",
+              "./node_modules/splitting/dist/splitting.css",
+              "./node_modules/splitting/dist/splitting-cells.css"
             ],
             "scripts": [
-              "./node_modules/gsap/dist/gsap.js",
               "./node_modules/locomotive-scroll/dist/locomotive-scroll.min.js",
-              "./node_modules/scrollreveal/dist/scrollreveal.js"
+              "./node_modules/scrollreveal/dist/scrollreveal.js",
+              "./node_modules/splitting/dist/splitting.js"
             ]
           },
           "configurations": {

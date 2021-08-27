@@ -5,6 +5,8 @@ import { CSSPlugin } from 'gsap/CSSPlugin';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import SplitType from 'split-type';
 
+declare var Splitting: any;
+
 @Component({
   selector: 'app-gsap-demo',
   templateUrl: './gsap-demo.component.html',
@@ -12,12 +14,27 @@ import SplitType from 'split-type';
 })
 export class GsapDemoComponent implements OnInit, AfterViewInit {
 
-  constructor() {}
+
+  // @ViewChild('testsplitting', { static: true })
+
+  constructor(private elRef:ElementRef) {}
 
   ngOnInit(): void {
 
-    const spplittext = new SplitType('.gsapslpittext', {
-      types: 'chars',
+  }
+
+  ngAfterViewInit():void {
+    Splitting();
+
+    const parent = this.elRef.nativeElement.querySelector('.gsapsplittingdemo2');
+    const results = Splitting({
+      target: parent,
+      by: 'lines'
+    })
+    // console.log(results[0].lines)
+
+    const splitTypeTest = new SplitType('.gsapSpliTypeTest', {
+      types: 'chars,lines,words',
       // absolute: true,
     });
 
@@ -27,25 +44,35 @@ export class GsapDemoComponent implements OnInit, AfterViewInit {
     }, {
       opacity: 1, y:0, duration: 1.2, ease:"power2.inout"
     });
-     gsap.from('.gsapTextPlugin', {
+
+    gsap.from('.gsapTextPlugin', {
       duration: 2,
       text: " ",
-      delay:1
+      delay:1,
+      ease:"sine"
     });
-    gsap.from(spplittext.chars, {
+
+    gsap.from(splitTypeTest.lines, {
       opacity: 0,
-      y: '150%',
-      duration: 1.2,
+      y: '40%',
+      duration: 1,
       stagger: {
         amount: 1.4
       },
-      delay: 1.4,
-      ease:"expo"
+      delay: 0.2,
+      ease:"Power3.easeOut"
     })
-  }
 
-  ngAfterViewInit():void {
-
+    gsap.from(results[0].lines, {
+      opacity: 0,
+      y: '40%',
+      duration: 1,
+      stagger: {
+        amount: 1.4
+      },
+      delay: 0.2,
+      ease:"Power3.easeOut"
+    })
   }
 
 }
