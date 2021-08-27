@@ -8,6 +8,14 @@
   vertical-align: middle;
 }
 
+:host ::ng-deep hr {
+  margin: 52px 0;
+  border: 0;
+  color: #000;
+  background-color: #000;
+  height: 1px;
+}
+
 
 :host .container {
   max-width: 1200px;
@@ -28,19 +36,22 @@
     font-size: 56px;
   }
 
-  .gsapslpittext {
+  .gsapSpliTypeTest {
     margin: 0;
     position: relative;
     font-size: 64px;
     line-height: 1.25;
 	  overflow: hidden;
+    color: gray;
   }
+
   .gsapsplittingdemo {
     margin: 0;
     position: relative;
     font-size: 64px;
     line-height: 1.25;
 	  overflow: hidden;
+    color: blue;
 
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -60,22 +71,19 @@
 
     @keyframes slide-in {
       from {
-        transform: translateY(15px);
+        transform: translateY(100%);
         opacity: 0;
       }
     }
-    // @keyframes slide-in {
-    //   from {
-    //     transform: translateZ(-100px) rotateX(90deg);
-    //     opacity: 0;
-    //   }
-    // }
-    // @keyframes slide-in {
-    //   from {
-    //     transform: rotateX(-180deg) translateY(-100px);
-    //     opacity: 0;
-    //   }
-    // }
+  }
+
+  .gsapsplittingdemo2 {
+    margin: 0;
+    position: relative;
+    font-size: 64px;
+    line-height: 1.25;
+	  overflow: hidden;
+    color: yellowgreen;
   }
 }
 
