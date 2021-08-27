@@ -35,7 +35,51 @@
     line-height: 1.25;
 	  overflow: hidden;
   }
+  .gsapsplittingdemo {
+    margin: 0;
+    position: relative;
+    font-size: 64px;
+    line-height: 1.25;
+	  overflow: hidden;
+
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    // perspective: 1100px;
+    // perspective-origin: 50% 50%;
+
+
+    &.splitting .char{
+      animation: slide-in .6s cubic-bezier(.5, 0, .5, 1) both;
+      animation-delay: calc(20ms * var(--char-index) + 1000ms );
+    }
+
+    &.splitting .word{
+      animation: slide-in .6s cubic-bezier(.5, 0, .5, 1) both;
+      animation-delay: calc(100ms * var(--word-index) + 1000ms );
+    }
+
+    @keyframes slide-in {
+      from {
+        transform: translateY(15px);
+        opacity: 0;
+      }
+    }
+    // @keyframes slide-in {
+    //   from {
+    //     transform: translateZ(-100px) rotateX(90deg);
+    //     opacity: 0;
+    //   }
+    // }
+    // @keyframes slide-in {
+    //   from {
+    //     transform: rotateX(-180deg) translateY(-100px);
+    //     opacity: 0;
+    //   }
+    // }
+  }
 }
+
+
 
 
 

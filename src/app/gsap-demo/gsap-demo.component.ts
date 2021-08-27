@@ -5,6 +5,8 @@ import { CSSPlugin } from 'gsap/CSSPlugin';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import SplitType from 'split-type';
 
+declare var Splitting: any;
+
 @Component({
   selector: 'app-gsap-demo',
   templateUrl: './gsap-demo.component.html',
@@ -45,7 +47,7 @@ export class GsapDemoComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit():void {
-
+    Splitting();
   }
 
 }
