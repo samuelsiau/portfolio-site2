@@ -9,6 +9,7 @@ import { ScrollrevealDemoComponent } from './scrollreveal-demo/scrollreveal-demo
 import { LocomotiveDemoComponent } from './locomotive-demo/locomotive-demo.component';
 import { DemoNavComponent } from './demo-nav/demo-nav.component';
 import { GsapDemoComponent } from './gsap-demo/gsap-demo.component';
+import { AosDemoComponent } from './aos-demo/aos-demo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GsapDemoComponent } from './gsap-demo/gsap-demo.component';
     ScrollrevealDemoComponent,
     LocomotiveDemoComponent,
     DemoNavComponent,
-    GsapDemoComponent
+    GsapDemoComponent,
+    AosDemoComponent
   ],
   imports: [
     BrowserModule,
