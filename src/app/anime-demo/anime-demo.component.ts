@@ -38,7 +38,7 @@ export class AnimeDemoComponent implements OnInit, AfterViewInit {
       translateY: '100%',
       opacity: 0,
       direction: 'reverse',
-      easing: 'cubicBezier(.08,.57,.16,1)',
+      easing: 'easeInOutCubic',
       duration: 1000,
       delay: anime.stagger(400, {from: 'last'})
     })
