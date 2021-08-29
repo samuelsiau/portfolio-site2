@@ -23,7 +23,6 @@
     "@types/gsap": "^3.0.0",
     "aos": "^3.0.0-beta.6",
     "gsap": "^3.7.1",
-    "kute.js": "^2.1.2",
     "locomotive-scroll": "^4.1.1",
     "ngx-scrollreveal": "^3.0.0",
     "rxjs": "~6.6.0",
