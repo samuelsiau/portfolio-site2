@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+
+:host ::ng-deep img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+:host ::ng-deep hr {
+  margin: 52px 0;
+  border: 0;
+  color: #000;
+  background-color: #000;
+  height: 1px;
+}
+
+
+:host ::ng-deep .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+:host ::ng-deep {
+  .kuteSpliTypeTest {
+    margin: 0;
+    position: relative;
+    font-size: 64px;
+    line-height: 1.25;
+	  overflow: hidden;
+    color: gray;
+
+    .line {
+      opacity: 0;
+    }
+  }
+}

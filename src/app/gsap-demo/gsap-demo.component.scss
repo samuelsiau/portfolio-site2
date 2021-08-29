@@ -22,7 +22,7 @@
   margin: 0 auto;
 }
 
-:host ::ng-deep {
+:host {
   .gsaptest {
     font-size: 24px;
   }

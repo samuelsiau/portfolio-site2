@@ -43,7 +43,8 @@
             "scripts": [
               "./node_modules/locomotive-scroll/dist/locomotive-scroll.min.js",
               "./node_modules/scrollreveal/dist/scrollreveal.js",
-              "./node_modules/splitting/dist/splitting.js"
+              "./node_modules/splitting/dist/splitting.js",
+              "./node_modules/kute.js/dist/kute.js"
             ]
           },
           "configurations": {
