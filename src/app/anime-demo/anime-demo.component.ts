@@ -2,14 +2,14 @@ import SplitType from 'split-type';
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import anime from 'animejs'
 
+declare var Splitting: any;
+
 @Component({
   selector: 'app-anime-demo',
   templateUrl: './anime-demo.component.html',
   styleUrls: ['./anime-demo.component.scss']
 })
 export class AnimeDemoComponent implements OnInit, AfterViewInit {
-
-  // something: any;
 
   constructor(private elRef:ElementRef) { }
 
@@ -65,6 +65,26 @@ export class AnimeDemoComponent implements OnInit, AfterViewInit {
       easing: 'linear',
       duration: 10000,
       loop: true
+    });
+
+
+    Splitting();
+    const splittingElement = this.elRef.nativeElement.querySelector('.splittingAnimeTest');
+    const splittingTest = Splitting({
+      target: splittingElement,
+      by: 'lines'
     })
+
+    const result = splittingTest[0].lines;
+    var animesplitting = anime({
+      targets: result,
+      translateY: '100%',
+      opacity: 0,
+      direction: 'reverse',
+      easing: 'easeInOutCubic',
+      duration: 1000,
+      delay: anime.stagger(400, {from: 'last'})
+    })
+
   }
 }
