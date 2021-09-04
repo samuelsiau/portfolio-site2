@@ -75,9 +75,10 @@ export class AnimeDemoComponent implements OnInit, AfterViewInit {
       by: 'lines'
     })
 
-    const result = splittingTest[0].lines;
-    var animesplitting = anime({
-      targets: result,
+    const splittingResult = splittingTest[0].lines;
+
+    anime({
+      targets: splittingResult,
       translateY: '100%',
       opacity: 0,
       direction: 'reverse',
@@ -85,6 +86,6 @@ export class AnimeDemoComponent implements OnInit, AfterViewInit {
       duration: 1000,
       delay: anime.stagger(400, {from: 'last'})
     })
-
   }
 }
+
