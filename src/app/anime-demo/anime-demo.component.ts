@@ -28,7 +28,7 @@ export class AnimeDemoComponent implements OnInit, AfterViewInit {
     blob4 = "M48.6,-16.6C57.7,12,56,43.4,37.2,58.8C18.5,74.2,-17.3,73.7,-38.3,57.4C-59.2,41.1,-65.2,9,-56.4,-19.4C-47.5,-47.8,-23.7,-72.5,-2,-71.9C19.8,-71.2,39.6,-45.3,48.6,-16.6Z",
     blob5 = "M57.1,-17.3C66.6,10.7,61.7,44.5,44.9,55.2C28,65.9,-0.9,53.5,-25.9,35.4C-50.9,17.3,-72.1,-6.5,-67.1,-28.2C-62.1,-49.9,-31.1,-69.5,-3.6,-68.3C23.8,-67.1,47.6,-45.2,57.1,-17.3Z";
 
-    const splitTypeTest = new SplitType('.splitTextAnimeTest', {
+    const splitTypeTest = new SplitType(splitTextAnimeTest, {
       types: 'chars,lines,words',
       // absolute: true,
     });
@@ -86,6 +86,9 @@ export class AnimeDemoComponent implements OnInit, AfterViewInit {
       duration: 1000,
       delay: anime.stagger(400, {from: 'last'})
     })
+
+
+
   }
 }
 
