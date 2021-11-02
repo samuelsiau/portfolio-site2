@@ -9,7 +9,6 @@ import { AosDemoComponent } from './aos-demo/aos-demo.component';
 import { AnimeDemoComponent } from './anime-demo/anime-demo.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'demo', component: DemoNavComponent},
   { path: 'home', component: HomeComponent },
   { path: 'locomotivedemo', component: LocomotiveDemoComponent },
@@ -17,11 +16,12 @@ const routes: Routes = [
   { path: 'gsapdemo', component: GsapDemoComponent},
   { path: 'aosdemo', component: AosDemoComponent },
   { path: 'animedemo', component: AnimeDemoComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   // imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   exports: [RouterModule]
 })
