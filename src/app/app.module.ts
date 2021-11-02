@@ -10,6 +10,7 @@ import { LocomotiveDemoComponent } from './locomotive-demo/locomotive-demo.compo
 import { DemoNavComponent } from './demo-nav/demo-nav.component';
 import { GsapDemoComponent } from './gsap-demo/gsap-demo.component';
 import { AosDemoComponent } from './aos-demo/aos-demo.component';
+import { AnimeDemoComponent } from './anime-demo/anime-demo.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AosDemoComponent } from './aos-demo/aos-demo.component';
     LocomotiveDemoComponent,
     DemoNavComponent,
     GsapDemoComponent,
-    AosDemoComponent
+    AosDemoComponent,
+    AnimeDemoComponent
   ],
   imports: [
     BrowserModule,

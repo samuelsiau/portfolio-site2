@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ScrollrevealDemoComponent } from './scrollreveal-demo/scrollreveal-demo.component';
 import { AosDemoComponent } from './aos-demo/aos-demo.component';
+import { AnimeDemoComponent } from './anime-demo/anime-demo.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'scrollreaveldemo', component: ScrollrevealDemoComponent},
   { path: 'gsapdemo', component: GsapDemoComponent},
   { path: 'aosdemo', component: AosDemoComponent },
+  { path: 'animedemo', component: AnimeDemoComponent },
   { path: '**', component: HomeComponent },
 ];
 

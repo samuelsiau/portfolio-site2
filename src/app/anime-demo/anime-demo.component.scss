@@ -1,0 +1,55 @@
+:host {
+  display: block;
+}
+
+:host ::ng-deep img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+:host .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+:host {
+  .test1 {
+    width: 200px;
+    height: 200px;
+    background-color: chocolate;
+  }
+
+  .testSVG1 {
+    width: 600px;
+    height: 600px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      // filter: blur(50px);
+    }
+  }
+
+  .splitTextAnimeTest {
+    margin: 0;
+    position: relative;
+    font-size: 64px;
+    line-height: 1.25;
+	  overflow: hidden;
+
+    .line {
+      will-change: transform;
+    }
+  }
+
+  .splittingAnimeTest {
+    margin: 0;
+    position: relative;
+    font-size: 64px;
+    line-height: 1.25;
+	  overflow: hidden;
+  }
+}
