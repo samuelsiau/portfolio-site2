@@ -87,8 +87,6 @@ export class AnimeDemoComponent implements OnInit, AfterViewInit {
       delay: anime.stagger(400, {from: 'last'})
     })
 
-
-
   }
 }
 
